@@ -489,31 +489,41 @@ html {
   font-size: 1.6em;
 }
 
-
-.profile {
-  margin-left: 1170px;
-  width: 360px;
-  height: 399px;
-  position: absolute;
-  top: 300px;
-  border-radius: 20px;
-  overflow: hidden;
-  transition: transform 0.2s ease-out; 
+/* TILT EFFECT IMAGE  */
+.image-container {
+    position: relative;
+    overflow: visible;
+    width: 360px;
+    height: 399px;
+    margin-left: 1170px;
+    top: 300px;
+    position: absolute;
+    perspective: 1000px;
+    animation: slideInFromRight 2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
 }
 
 @keyframes slideInFromRight {
-  0% {
-    opacity: 0;
-    transform: scale(1.5) translateX(100%);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1.5) translateX(0);
-  }
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
+/* TILT EFFECT IMAGE  */
 .profile {
-  animation: slideInFromRight 2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+  margin-left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transition: transform 0.3s ease-out;
+  transform: scale(1.5);
 }
 
 .profile img {
@@ -522,5 +532,6 @@ html {
   object-fit: cover;
   transition: transform 0.2s ease-out; 
 }
+
 
 

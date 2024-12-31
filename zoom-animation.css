@@ -1,0 +1,171 @@
+@keyframes floating {
+    0% {
+      transform: translateY(0px) scale(1.5);
+    }
+    50% {
+      transform: translateY(-20px) scale(1.5);
+    }
+    100% {
+      transform: translateY(0px) scale(1.5);
+    }
+  }
+  
+  .profile {
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .profile:hover {
+    animation: floating 3s ease-in-out infinite;
+    filter: drop-shadow(0 0 15px rgba(0, 255, 0, 0.5));
+  }
+  
+  /* Responsive styles */
+  @media screen and (max-width: 1200px) {
+    .profile {
+      margin-left: 950px;
+      width: 300px;
+      height: 339px;
+      top: 350px;
+    }
+  
+    .text1 {
+      font-size: 6rem;
+      margin-left: 100px;
+    }
+  
+    .subtext, .rectangle, .descriptext {
+      margin-left: 100px;
+    }
+  
+    .rectangle {
+      width: 500px;
+    }
+  }
+  
+  @media screen and (max-width: 992px) {
+    .profile {
+      margin-left: 700px;
+      width: 250px;
+      height: 289px;
+    }
+  
+    .text1 {
+      font-size: 5rem;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .profile {
+      position: relative;
+      margin: 20px auto;
+      top: 50px;
+      left: 0;
+      right: 0;
+    }
+  
+    .text1 {
+      font-size: 4rem;
+      margin-left: 50px;
+      margin-top: 100px;
+    }
+  
+    .subtext, .rectangle, .descriptext {
+      margin-left: 50px;
+    }
+  
+    .rectangle {
+      width: 400px;
+    }
+  
+    #navbars nav {
+      transform: translateX(-20px);
+    }
+  
+    #navbars nav a {
+      margin-right: 20px;
+      font-size: 18px;
+    }
+  
+    /* Social buttons repositioning */
+    .button, .Btnig, .Btnlink, .Btngit {
+      position: relative;
+      display: inline-block;
+      margin: 10px;
+      top: 20px;
+    }
+  
+    .button {
+      margin-left: 50px;
+    }
+  }
+  
+  @media screen and (max-width: 576px) {
+    .text1 {
+      font-size: 3rem;
+      margin-left: 20px;
+    }
+  
+    .subtext {
+      font-size: 1.2rem;
+      margin-left: 20px;
+    }
+  
+    .rectangle {
+      width: 300px;
+      margin-left: 20px;
+    }
+  
+    .descriptext {
+      margin-left: 20px;
+      font-size: 0.9rem;
+    }
+  
+    #navbars {
+      justify-content: center;
+    }
+  
+    #navbars nav {
+      transform: none;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  
+    #navbars nav a {
+      margin: 5px;
+      font-size: 16px;
+    }
+  
+    .profile {
+      width: 200px;
+      height: 239px;
+    }
+  
+    /* Stack social buttons vertically on mobile */
+    .button, .Btnig, .Btnlink, .Btngit {
+      display: block;
+      margin: 10px auto;
+    }
+  }
+  
+  /* Fix for very small screens */
+  @media screen and (max-width: 360px) {
+    .text1 {
+      font-size: 2.5rem;
+    }
+  
+    .subtext {
+      font-size: 1rem;
+    }
+  
+    .rectangle {
+      width: 250px;
+    }
+  
+    .profile {
+      width: 180px;
+      height: 219px;
+    }
+  }
+  
+  
+  
